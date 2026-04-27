@@ -16,17 +16,23 @@
         </div>
         <h3>David John</h3>
       </div>
-      <div class="content">
-        <input
-          class="input"
-          type="text"
-          placeholder="Product Name"
-          id="productName"
-        />
-        <button>Add Product</button>
-        <button>Remove Last Products</button>
+      <div class="ContAll">
+        <h2>Product List</h2>
+        <div class="content1">
+          <input
+            class="input"
+            type="text"
+            placeholder="Product Name"
+            id="productName"
+          />
+        </div>
         <p class="lop" id="ListOfProducts"></p>
+        <div class="content2">
+          <button onclick="addProduct()">Add Product</button>
+          <button onclick="removeLastProduct()">Remove Last Products</button>
+        </div>
       </div>
     </div>
+    <script src="Java.js"></script>
   </body>
 </html>

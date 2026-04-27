@@ -13,13 +13,14 @@ body {
 .container {
   width: 70%;
   height: 85vh;
-  background-color: rgba(147, 213, 234, 0.868);
+  background-color: rgba(190, 232, 245, 0.868);
   margin: auto;
   border: solid 23px rgb(18, 80, 103);
+  border-radius: 8px;
 }
 .Topic {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 5px;
   color: transparent;
 }
 .dashB {
@@ -34,10 +35,14 @@ body {
 h3 {
   padding: 10px;
 }
-
-.content {
-  margin-top: 30px;
-  margin-left: 23%;
+.ContAll {
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.content1 {
+  margin-top: 5px;
   padding: 20px;
   font-size: 18px;
 }
@@ -68,9 +73,10 @@ button:hover {
 }
 .lop {
   background-color: transparent;
-  padding: 80px;
-  margin-top: 20px;
+  padding-left: 20px;
+  margin-top: 5px;
   width: 75%;
-  height: 220px;
+  height: 150px;
   color: black;
+  justify-self: center;
 }
