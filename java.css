@@ -79,4 +79,5 @@ button:hover {
   height: 150px;
   color: black;
   justify-self: center;
+  text-align: center;
 }

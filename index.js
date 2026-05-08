@@ -2,7 +2,7 @@
 const fruit = ["Banana", "Watermelon", "Apple", "Grape", "Orange"];
 document.getElementById("fruits").innerHTML = fruit[0] + " " + fruit[4];
 
-//2. add anew item "Mango" to this array
+//2. add a new item "Mango" to this array
 
 const fruits = ["Apple", "Banana", "Orange"];
 fruits.push("Mango");
@@ -24,9 +24,13 @@ document.getElementById("check").innerHTML = exists;
 
 //6. loop through this array and display each value
 const names = ["John", "Jane", "Peter"];
-for (let n = 0; n < names.length; n++) {
-  document.getElementById("loop").innerHTML += names[n] + " ";
-}
+// for (let n = 0; n < names.length; n++) {
+//   document.getElementById("loop").innerHTML += names[n] + " ";
+// }
+
+names.forEach(function (name) {
+  console.log(name);
+});
 
 //7. Sort this array in ascending order.
 const nums = [50, 10, 5, 100];
@@ -41,6 +45,8 @@ const colors = ["Red", "Blue", "Green"];
 const colorsString = colors.toString();
 document.getElementById("colors").innerHTML = colorsString;
 
+console.log(colorsString);
+
 //9. Create an empty array and add 3 items using index;
 const cars = [];
 cars[0] = "limousine";
@@ -52,6 +58,7 @@ document.getElementById("cars").innerHTML = cars;
 
 const fruits2 = ["Apple", "Orange", "Mango"];
 document.getElementById("fruitindex").innerHTML = fruits2[1];
+console.log(fruits2.indexOf("Orange"));
 
 // CONDITION PRACTICE
 
@@ -65,9 +72,11 @@ if (num > 10) {
 
 //2. Check if a user us 18 or older
 
-let age = 16;
-if (age >= 16) {
+let age = 20;
+if (age >= 18) {
   document.getElementById("age").innerHTML = "You are 18 or older";
+} else {
+  document.getElementById("age").innerHTML = "You are under 18";
 }
 
 //3. Write an if...else statement
@@ -79,7 +88,7 @@ if (score == 3) {
 }
 
 // 4. Use else if:
-let grade = 70;
+let grade = 54;
 if (grade >= 70) {
   document.getElementById("gradeA").innerHTML = "A";
 } else if (grade >= 50) {
@@ -89,8 +98,12 @@ if (grade >= 70) {
 }
 
 //5. Use ternary operator
-let myAge = (age = 20 ? "Adult" : "Minor");
-document.getElementById("ternary").innerHTML = myAge;
+// let myAge = (age = 20 ? "Adult" : "Minor");
+// document.getElementById("ternary").innerHTML = myAge;
+
+let agee = 10;
+let ageStatus = agee >= 18 ? "Adult" : "Minor";
+document.getElementById("ternary").innerHTML = ageStatus;
 
 //6. Use logical and (&&)
 let number = 14;
@@ -100,7 +113,7 @@ if (number > 10 && number < 20) {
 }
 
 //7. Use logical or (||)
-let number2 = 0;
+let number2 = 20;
 if (number2 === 0 || number2 > 1) {
   document.getElementById("Lnumber2").innerHTML = "The number is 0";
 } else {
@@ -139,7 +152,7 @@ switch (new Date().getDay()) {
 }
 
 //10. Check Truthy/Falsy
-let value = "";
+let value = "10";
 if (value) {
   document.getElementById("truthy").innerHTML = "The value is truthy";
 } else {
@@ -157,15 +170,16 @@ const car = { brand: "Toyota", model: "Camry", year: 2020 };
 //alert(car.model);
 
 //3. Updating Object Values
-const user = { name: "John", age: 25 };
-user.age = 30;
-document.getElementById("Objuser").innerHTML = user.age;
+const userr = { name: "John", age: 25 };
+userr.age = 30;
+document.getElementById("Objuser").innerHTML = userr.age;
 
 //4. Adding New Properties
 
 const users = { name: "Jane", age: 22 };
 users.email = "jane@example.com";
-document.getElementById("Objusers").innerHTML = users.email;
+document.getElementById("Objusers").innerHTML = users;
+console.log(users);
 
 //5. Loop through Object
 
@@ -173,6 +187,7 @@ const student = { name: "Peter", score: "80", grade: "A" };
 for (let key in student) {
   document.getElementById("loopobj").innerHTML +=
     key + ": " + student[key] + "<br>";
+  console.log(key + ": " + student[key]);
 }
 
 //6. object with array
@@ -204,7 +219,7 @@ const calculator = {
 document.getElementById("method").innerHTML = calculator.add(5, 10);
 
 //9. Object Condition
-const product = { name: "Phone", price: 1200 };
+const product = { name: "Phone", price: 12 };
 if (product.price > 100) {
   document.getElementById("objPro").innerHTML = "Expensive";
 } else {
@@ -218,10 +233,12 @@ const usersss = [
   { name: "Paul", age: 25 },
 ];
 for (let i = 0; i < usersss.length; i++) {
-  if (usersss[i].age <= 18) {
+  if (usersss[i].age >= 18) {
     document.getElementById("objarray2").innerHTML +=
-      usersss[i].name + " is Under 18";
+      usersss[i].name + " is Above 18" + "<br>";
+  }else {
+    document.getElementById("objarray2").innerHTML +=
+      usersss[i].name + " is under 18" + "<br>";
   }
 }
-
-//11.
+console.log(usersss[1].name);
